@@ -1,5 +1,7 @@
 # Handle M+ Permissions in Android
 
+[![](https://jitpack.io/v/Promact/dynamic-permission-handling-android.svg)](https://jitpack.io/#Promact/dynamic-permission-handling-android)
+
 This library is created to help developers to check the status of requested permission that either it is allowed, not given or user denied it permanently.
 
 In Android, it is very tough to find that user denied permission permanently and so the solution is build in this library.
@@ -17,11 +19,12 @@ allprojects {
 }
 ```
 
-### Add library in your app-level build.gradle file
+### Add library in your app-level build.gradle file 
+[![](https://jitpack.io/v/Promact/dynamic-permission-handling-android.svg)](https://jitpack.io/#Promact/dynamic-permission-handling-android)
 
 ```gradle
 dependencies {
-    implementation 'com.github.Promact:dynamic-permission-handling-android:1.0.0'
+    implementation 'com.github.Promact:dynamic-permission-handling-android:latest-version'
 }
 ```
 
