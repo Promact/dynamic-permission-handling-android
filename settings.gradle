@@ -1,0 +1,2 @@
+include ':app', ':dynamicpermissions'
+rootProject.name='Dynamic Permission Handling'
