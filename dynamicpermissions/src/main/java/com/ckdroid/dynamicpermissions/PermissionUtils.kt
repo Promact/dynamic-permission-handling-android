@@ -28,6 +28,7 @@ class PermissionUtils {
 
             permissions.forEach { permission ->
                 if (hasPermissionAllowed(activity, permission)) {
+                    permissionPreference.setPermissionAllowed(permission)
                     permissionStatus[permission] = PermissionStatus.ALLOWED
                 } else {
                     val isShowRational = isNeededToShowRequestRational(activity, permission)
@@ -96,7 +97,7 @@ class PermissionUtils {
             )
         }
 
-        fun askUserToRequestPermissionExplicitly(context: Context){
+        fun askUserToRequestPermissionExplicitly(context: Context) {
             val intent = Intent()
             intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
             val uri = Uri.fromParts("package", context.packageName, null)
@@ -125,7 +126,7 @@ class PermissionUtils {
 
                 val permissionPreference = PermissionPreference(activity)
 
-                for(permission in permissionList){
+                for (permission in permissionList) {
                     permissionPreference.setPermissionRequested(permission)
                 }
             }
