@@ -20,4 +20,9 @@ internal class PermissionPreference(context: Context) {
         editor.putBoolean(permission, true).apply()
     }
 
+    fun setPermissionAllowed(permission: String) {
+        val editor = sharedPreference.edit()
+        editor.putBoolean(permission, false).apply()
+    }
+
 }
